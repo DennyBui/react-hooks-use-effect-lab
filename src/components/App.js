@@ -9,9 +9,11 @@ function App() {
   const currentQuestion = questions.find((q) => q.id === currentQuestionId);
 
   function handleQuestionAnswered(correct) {
+    console.log(currentQuestionId, questions.length)
     if (currentQuestionId < questions.length) {
       setCurrentQuestion((currentQuestionId) => currentQuestionId + 1);
     } else {
+      console.log("do you get here 2")
       setCurrentQuestion(null);
     }
     if (correct) {
